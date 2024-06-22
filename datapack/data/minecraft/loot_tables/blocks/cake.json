@@ -9,10 +9,8 @@
           "name": "minecraft:cake",
           "functions": [
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330000
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330000}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -24,10 +22,8 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330001
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330001}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -39,10 +35,8 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330002
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330002}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -54,10 +48,8 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330003
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330003}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -69,10 +61,8 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330004
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330004}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -84,10 +74,8 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": 330005
-              },
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:330005}",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -103,18 +91,6 @@
               "block": "minecraft:cake",
               "properties": [
                 "bites"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:inverted",
-                  "term": {
-                    "condition": "minecraft:block_state_property",
-                    "block": "minecraft:cake",
-                    "properties": {
-                      "bites": "0"
-                    }
-                  }
-                }
               ]
             }
           ]
@@ -126,10 +102,10 @@
   "__smithed__": {
     "rules": [
       {
-        "type": "merge",
+        "type": "smithed:merge",
         "target": "pools",
         "source": {
-          "type": "reference",
+          "type": "smithed:reference",
           "path": "pools"
         }
       }

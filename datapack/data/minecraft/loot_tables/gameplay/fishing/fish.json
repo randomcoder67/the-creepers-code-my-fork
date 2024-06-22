@@ -19,7 +19,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biomes": "#minecraft:is_river"
+                    "biome": "minecraft:river"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:frozen_river"
                   }
                 },
                 {
@@ -41,11 +47,25 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biomes": [
-                      "minecraft:warm_ocean",
-                      "minecraft:deep_lukewarm_ocean",
-                      "minecraft:lukewarm_ocean"
-                    ]
+                    "biome": "minecraft:deep_warm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:warm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:deep_lukewarm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:lukewarm_ocean"
                   }
                 },
                 {
@@ -67,11 +87,25 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biomes": [
-                      "minecraft:warm_ocean",
-                      "minecraft:deep_lukewarm_ocean",
-                      "minecraft:lukewarm_ocean"
-                    ]
+                    "biome": "minecraft:deep_warm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:warm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:deep_lukewarm_ocean"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biome": "minecraft:lukewarm_ocean"
                   }
                 },
                 {
@@ -81,94 +115,9 @@
               ]
             }
           ]
-        },
-        {
-          "type": "minecraft:loot_table",
-          "weight": 2,
-          "conditions": [
-            {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": [
-                      "minecraft:deep_frozen_ocean",
-                      "minecraft:frozen_ocean"
-                    ]
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
-                }
-              ]
-            }
-          ],
-          "value": "tcc:items/swordfish"
         }
       ]
     }
   ],
-  "random_sequence": "minecraft:gameplay/fishing/fish",
-  "__smithed__": {
-    "rules": [
-      {
-        "type": "merge",
-        "target": "pools[0].entries[1].weight",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[1].weight"
-        }
-      },
-      {
-        "type": "merge",
-        "target": "pools[0].entries[2].weight",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[2].weight"
-        }
-      },
-      {
-        "type": "merge",
-        "target": "pools[0].entries[3].weight",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[3].weight"
-        }
-      },
-      {
-        "type": "append",
-        "target": "pools[0].entries[1].conditions",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[1].conditions[0]"
-        }
-      },
-      {
-        "type": "append",
-        "target": "pools[0].entries[2].conditions",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[2].conditions[0]"
-        }
-      },
-      {
-        "type": "append",
-        "target": "pools[0].entries[3].conditions",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[3].conditions[0]"
-        }
-      },
-      {
-        "type": "append",
-        "target": "pools[0].entries",
-        "source": {
-          "type": "reference",
-          "path": "pools[0].entries[4]"
-        }
-      }
-    ]
-  }
-}
+  "random_sequence": "minecraft:gameplay/fishing/fish"
+}

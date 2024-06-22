@@ -2,10 +2,8 @@
   "parent": "minecraft:husbandry/plant_seed",
   "display": {
     "icon": {
-      "id": "minecraft:poisonous_potato",
-      "components": {
-        "minecraft:custom_model_data": 330006
-      }
+      "item": "minecraft:bread",
+      "nbt": "{CustomModelData:330001}"
     },
     "title": {
       "translate": "advancements.tcc.minecraft.husbandry.muffin_time.title"
@@ -31,9 +29,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "predicates": {
-            "minecraft:custom_data": "{tcc:{id:\"sweet_berry_muffin\"}}"
-          }
+          "nbt": "{tcc:{id:\"sweet_berry_muffin\"}}"
         }
       }
     },
@@ -41,18 +37,14 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "predicates": {
-            "minecraft:custom_data": "{tcc:{id:\"glow_berry_muffin\"}}"
-          }
+          "nbt": "{tcc:{id:\"glow_berry_muffin\"}}"
         }
       }
     }
   },
   "requirements": [
     [
-      "sweet_berry_muffin"
-    ],
-    [
+      "sweet_berry_muffin",
       "glow_berry_muffin"
     ]
   ]

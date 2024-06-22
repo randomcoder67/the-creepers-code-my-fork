@@ -18,15 +18,12 @@
           "name": "minecraft:cake",
           "conditions": [
             {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:location_check",
-                "predicate": {
-                  "block": {
-                    "blocks": [
-                      "minecraft:cake"
-                    ]
-                  }
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "minecraft:air"
+                  ]
                 }
               }
             }
@@ -37,13 +34,13 @@
   ],
   "random_sequence": "minecraft:blocks/lime_candle_cake",
   "__smithed__": {
-    "rules": [
+    "rules":[
       {
-        "type": "append",
-        "target": "pools",
-        "source": {
-          "type": "reference",
-          "path": "pools[1]"
+        "type":"smithed:append",
+        "target":"pools",
+        "source":{
+          "type":"smithed:reference",
+          "path":"pools[1]"
         }
       }
     ]

@@ -14,16 +14,11 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantment": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
-                        }
-                      ]
-                    }
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch"
+                      }
+                    ]
                   }
                 },
                 {
@@ -40,20 +35,15 @@
               "name": "minecraft:soul_campfire",
               "functions": [
                 {
-                  "function": "minecraft:set_components",
-                  "components": {
-                    "minecraft:custom_model_data": 330000,
-                    "minecraft:block_state": {
-                      "lit": "false"
-                    }
-                  }
+                  "function": "minecraft:set_nbt",
+                  "tag": "{CustomModelData:330000,BlockStateTag:{lit:\"false\"}}"
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "items": "#minecraft:axes"
+                    "tag": "minecraft:axes"
                   }
                 }
               ]
@@ -82,20 +72,20 @@
   "__smithed__": {
     "rules": [
       {
-        "type": "insert",
+        "type": "smithed:insert",
         "index": 1,
         "target": "pools[0].entries[0].children",
         "source": {
-          "type": "reference",
+          "type": "smithed:reference",
           "path": "pools[0].entries[0].children[1]"
         }
       },
       {
-        "type": "insert",
+        "type": "smithed:insert",
         "index": 1,
         "target": "pools[0].entries[0].children[0].conditions",
         "source": {
-          "type": "reference",
+          "type": "smithed:reference",
           "path": "pools[0].entries[0].children[0].conditions[1]"
         }
       }
